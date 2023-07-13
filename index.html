@@ -24,15 +24,73 @@
         <div class="bookmarks-and-profile">
             <i class="fi fi-sr-bookmark bookmark"></i>
             <img src="./images/user.png" alt="user image" class="user-img">
+            <div class="fav-books">
+                <h2>
+                    Bookmarks
+                </h2>
+            </div>
         </div>
     </header>
 
     <main class="main-content">
         <div class="new-book">
-            <h2>
+            <h2 id="add-new-book">
                 Add New Book
                 <i class="fi fi-sr-add"></i>
             </h2>
+        </div>
+
+        <div class="new-book-form">
+            <span>
+                <i class="fi fi-sr-cross-circle cancel-button"></i>
+            </span>
+            <div class="book-form-wrapper">
+                <h2>
+                    New Book
+                </h2>
+                <form action="#" method="post" id="book-form">
+                    <fieldset>
+                        <label for="book-title">
+                            Book Title
+                        </label>
+                        <input type="text" id="book-title" name="book-title" class="title-input" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="book-author">
+                            Author
+                        </label>
+                        <input type="text" id="book-author" name="book-author" class="author-input" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="book-pages">
+                            Pages
+                        </label>
+                        <input type="text" id="book-pages" name="book-pages" class="pages-input">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="edition">
+                            Edition
+                        </label>
+                        <input type="text" id="edition" name="edition" class="edition-input">
+                    </fieldset>
+
+                    <fieldset class="book-status-wrapper">
+                        <label for="read-status">
+                            I have read the book already!
+                        </label>
+                        <input type="checkbox" id="read-status" name="read-status" checked>
+                    </fieldset>
+
+                    <fieldset class="button-fieldset">
+                        <button type="submit" class="submit-button">
+                            Submit
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
         </div>
 
         <div id="book-shelf"></div>
