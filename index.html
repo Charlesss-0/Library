@@ -22,12 +22,19 @@
         </div>
 
         <div class="bookmarks-and-profile">
-            <i class="fi fi-sr-bookmark bookmark"></i>
+            <i class="fi fi-sr-bookmark bookmark" id="bookmarks"></i>
             <img src="./images/user.png" alt="user image" class="user-img">
+
             <div class="fav-books">
+                <span class="cancel-button-wrapper">
+                    <i class="fi fi-sr-cross-circle cancel-button"></i>
+                </span>
                 <h2>
                     Bookmarks
                 </h2>
+                <div class="saved-books">
+
+                </div>
             </div>
         </div>
     </header>
@@ -41,7 +48,7 @@
         </div>
 
         <div class="new-book-form">
-            <span>
+            <span class="cancel-button-wrapper">
                 <i class="fi fi-sr-cross-circle cancel-button"></i>
             </span>
             <div class="book-form-wrapper">
@@ -67,7 +74,7 @@
                         <label for="book-pages">
                             Pages
                         </label>
-                        <input type="text" id="book-pages" name="book-pages" class="pages-input">
+                        <input type="number" id="book-pages" name="book-pages" class="pages-input">
                     </fieldset>
 
                     <fieldset>

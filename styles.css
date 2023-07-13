@@ -14,6 +14,7 @@
     --new-book-form-background: #f5f5f5;
     --submit-button-background: #2D4356;
     --fav-books-background: #f5f5f5;
+    --book-info-color: #5f5f5f;
 }
 
 *,
@@ -113,12 +114,25 @@ i {
 
     border-radius: 1em;
     display: none;
+    padding: 1em;
+    overflow: auto;
+    z-index: 2;
 }
 
 .fav-books h2 {
     font-size: 2rem;
     text-align: center;
-    margin: 1em;
+    margin-bottom: 15px;
+}
+
+.saved-books-info {
+    margin-bottom: 1em;
+}
+
+.cancel-button-wrapper {
+    font-size: 2rem;
+    display: flex;
+    justify-content: end;
 }
 
 /* HEADER CONTENT SECTION END */
@@ -174,14 +188,6 @@ i {
     padding: 1rem;
     display: none;
     z-index: 2;
-}
-
-.new-book-form i {
-    display: flex;
-    justify-content: end;
-    font-size: 2rem;
-    padding: 10px;
-    padding-bottom: 0;
 }
 
 .book-form-wrapper {
@@ -260,21 +266,40 @@ i {
     display: flex;
 }
 
-.book h2 {
+.book div {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
     flex: 1;
 }
 
-.book h2 span {
+.book div #book-info-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: start;
+    align-content: center;
+}
+
+.book div p {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.book div p span {
+    color: var(--book-info-color);
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.book div span {
     justify-self: end;
     font-size: 2rem;
     display: flex;
     gap: 1.5em;
 }
 
-.book h2 span i {
+.book div span i {
     display: flex;
 }
 
